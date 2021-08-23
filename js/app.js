@@ -1,38 +1,39 @@
 /**
- * 
+ *
  * Manipulating the DOM exercise.
  * Exercise programmatically builds navigation,
  * scrolls to anchors from navigation,
  * and highlights section in viewport upon scrolling.
- * 
+ *
  * Dependencies: None
- * 
+ *
  * JS Version: ES2015/ES6
- * 
+ *
  * JS Standard: ESlint
- * 
-*/
+ *
+ */
 /**
  * Define Global Variables
- * 
-*/
+ *
+ */
 const sections = document.querySelectorAll("section");
 const navBar = document.getElementById("navbar__list");
 /**
  * End Global Variables
  * Start Helper Functions
- * 
-*/
+ *
+ */
 
-// Click on anchor when li is clicked
-function clickOnAnchor(anchor) {
-  anchor.click();
+// scroll to section when li is clicked
+function scrollToSection(element, event) {
+  event.preventDefault();
+  element.scrollIntoView({ behavior: "smooth" });
 }
 /**
  * End Helper Functions
  * Begin Main Functions
- * 
-*/
+ *
+ */
 
 // build the nav & add event listener to each li
 function BuildNav() {
@@ -45,7 +46,7 @@ function BuildNav() {
     anchor.href = "#" + section.id;
     anchor.textContent = sectionName;
     li.appendChild(anchor);
-    li.addEventListener("click", clickOnAnchor.bind(null, anchor));
+    li.addEventListener("click", scrollToSection.bind(null, section));
     fragment.appendChild(li);
   });
   navBar.appendChild(fragment);
@@ -101,8 +102,8 @@ function hideWhenScrolling() {
 /**
  * End Main Functions
  * Begin Events
- * 
-*/
+ *
+ */
 
 // listening to scroll event to hide header when scrolling
 window.addEventListener("scroll", hideWhenScrolling);
