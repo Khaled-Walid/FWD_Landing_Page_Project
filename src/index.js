@@ -1,3 +1,4 @@
+/*eslint-disable*/
 /**
  *
  * Manipulating the DOM exercise.
@@ -16,6 +17,7 @@
  * Define Global Variables
  *
  */
+import {buildNav} from "./buildNav";
 const sections = document.querySelectorAll("section");
 const navBar = document.getElementById("navbar__list");
 /**
@@ -36,21 +38,6 @@ function scrollToSection(element, event) {
  */
 
 // build the nav & add event listener to each li
-function BuildNav() {
-  let fragment = new DocumentFragment();
-  sections.forEach((section) => {
-    const sectionName = section.dataset.nav;
-    const li = document.createElement("li");
-    li.setAttribute("class", "menu__link");
-    const anchor = document.createElement("a");
-    anchor.href = "#" + section.id;
-    anchor.textContent = sectionName;
-    li.appendChild(anchor);
-    li.addEventListener("click", scrollToSection.bind(null, section));
-    fragment.appendChild(li);
-  });
-  navBar.appendChild(fragment);
-}
 BuildNav();
 
 // Add class 'your-active-class' to section when near top of viewport
