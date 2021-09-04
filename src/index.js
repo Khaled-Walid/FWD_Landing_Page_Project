@@ -17,21 +17,13 @@
  * Define Global Variables
  *
  */
-import "./css/styles.css"
-import {buildNav} from "./buildNav";
+import "./css/styles.css";
+import { buildNav } from "./buildNav";
 const sections = document.querySelectorAll("section");
 const navBar = document.getElementById("navbar__list");
 /**
  * End Global Variables
- * Start Helper Functions
- *
  */
-
-// scroll to section when li is clicked
-function scrollToSection(element, event) {
-  event.preventDefault();
-  element.scrollIntoView({ behavior: "smooth" });
-}
 /**
  * End Helper Functions
  * Begin Main Functions
