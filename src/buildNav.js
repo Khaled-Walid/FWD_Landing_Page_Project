@@ -1,6 +1,8 @@
 /*eslint-disable*/
-
-export function BuildNav() {
+const sections = document.querySelectorAll("section");
+const navBar = document.getElementById("navbar__list");
+ 
+export function buildNav() {
   let fragment = new DocumentFragment();
   sections.forEach((section) => {
     const sectionName = section.dataset.nav;
@@ -14,4 +16,9 @@ export function BuildNav() {
     fragment.appendChild(li);
   });
   navBar.appendChild(fragment);
+}
+// scroll to section when li is clicked
+function scrollToSection(element, event) {
+  event.preventDefault();
+  element.scrollIntoView({ behavior: "smooth" });
 }

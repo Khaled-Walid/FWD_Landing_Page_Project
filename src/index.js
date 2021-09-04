@@ -17,6 +17,7 @@
  * Define Global Variables
  *
  */
+import "./css/styles.css"
 import {buildNav} from "./buildNav";
 const sections = document.querySelectorAll("section");
 const navBar = document.getElementById("navbar__list");
@@ -38,7 +39,7 @@ function scrollToSection(element, event) {
  */
 
 // build the nav & add event listener to each li
-BuildNav();
+buildNav();
 
 // Add class 'your-active-class' to section when near top of viewport
 // Add class 'menu__link__active' to Nav li element to highlight the section in the viewport.
