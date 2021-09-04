@@ -12,6 +12,14 @@
 /* html {
   scroll-behavior: smooth;
 } */
+@font-face {
+  font-family: Merriweather;
+  src: url("../fonts/Merriweather-Regular.ttf");
+}
+@font-face {
+  font-family: Fira Sans;
+  src: url("../fonts/FiraSans-Regular.ttf");
+}
 
 body {
   background: rgb(136, 203, 171);
