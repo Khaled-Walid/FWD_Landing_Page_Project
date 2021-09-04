@@ -1,0 +1,25 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "* [Usage](#Usage)\r * [How it works](#how-it-works)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khaled-Walid/FWD_Landing_Page_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khaled-Walid/FWD_Landing_Page_Project/issues"
+  },
+  "homepage": "https://github.com/Khaled-Walid/FWD_Landing_Page_Project#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "webpack": "^5.52.0"
+  }
+}
